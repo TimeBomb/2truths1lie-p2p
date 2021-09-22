@@ -8,7 +8,7 @@ export default function LoginPage() {
 	return (
 		<Page>
 			<fieldset>
-				<label for="playerName">Your Name:</label>
+				<label htmlFor="playerName">Your Name:</label>
 				<input
 					id="playerName"
 					value={context.name}
@@ -16,7 +16,7 @@ export default function LoginPage() {
 				></input>
 			</fieldset>
 			<fieldset>
-				<label for="roomId">Room ID:</label>
+				<label htmlFor="roomId">Room ID:</label>
 				<input
 					id="roomId"
 					value={context.roomId}
@@ -24,9 +24,6 @@ export default function LoginPage() {
 				></input>
 			</fieldset>
 
-			<button onClick={context.onHostRoom} disabled={!context.name || !context.roomId}>
-				Host Room
-			</button>
 			<button onClick={context.onJoinRoom} disabled={!context.name || !context.roomId}>
 				Join Room
 			</button>
